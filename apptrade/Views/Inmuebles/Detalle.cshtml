@@ -1,0 +1,23 @@
+@model apptrade.Models.Inmueble
+@{
+    ViewData["Title"] = Model.Titulo;
+}
+<div class="row">
+    <div class="col-md-7">
+        <img class="img-fluid rounded" src="@Model.Imagen" alt="@Model.Titulo" />
+    </div>
+    <div class="col-md-5">
+        <h2>@Model.Titulo</h2>
+        <p><strong>Ciudad:</strong> @Model.Ciudad</p>
+        <p><strong>Dirección:</strong> @Model.Direccion</p>
+        <p><strong>Tipo:</strong> @Model.Tipo</p>
+        <p><strong>Área:</strong> @Model.MetrosCuadrados m²</p>
+        <p><strong>Dormitorios:</strong> @Model.Dormitorios • <strong>Baños:</strong> @Model.Banos</p>
+        <p class="fs-4"><strong>Precio:</strong> S/ @Model.Precio</p>
+
+        <hr />
+        <!-- Solo botón (la lógica de agendar se implementa en P3) -->
+        <a class="btn btn-outline-primary" asp-action="Catalogo">Volver al catálogo</a>
+        <button class="btn btn-primary" disabled title="Se implementa en P3">Agendar visita</button>
+    </div>
+</div>
